@@ -10,4 +10,4 @@ This is a simple PCB for the Lolin D32, to learn and prototype your Projects.
 
 ### Pictures
 
-![Alt text](3drendering.png?raw=true "3D Rendering")
+![Alt text](pictures/3drendering.png?raw=true "3D Rendering")
