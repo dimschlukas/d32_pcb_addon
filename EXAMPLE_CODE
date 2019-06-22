@@ -1,16 +1,17 @@
 #include <Arduino.h>
-#include <wire.h>
-#include <SSD1306.h>
+#include <SPI.h>        // SPI Library
+#include <wire.h>       // I2C Library
+#include <SSD1306.h>    // Library for OLED Driver SSD1306
 
-SSD1306 display(0x3C, 32, 22);
-int D1 = 13;
+SSD1306 display(0x3C, 21, 22);  // Display configuration (Address, I2C_SDA_pin, I2C_SCL_pin)
+int D1 = 13;    // variable declaration for LEDs
 int D2 = 12;
 int D3 = 14;
 int D4 = 27;
 
 void setup() {
   display.init();
-  display.drawString(0, 0, "hello world");
+  display.drawString(0, 0, "hello world");    // Print "hello world" on display at 0, 0
   display.display();
   pinMode(0, INPUT);
   pinMode(4, INPUT);
@@ -23,7 +24,7 @@ void setup() {
 }
 
 void loop() {
-  int S1 = digitalRead(0);
+  int S1 = digitalRead(0);    // Variable declaration and reading input of buttons
   int S2 = digitalRead(4);
   int S3 = digitalRead(16);
   int S4 = digitalRead(17);
