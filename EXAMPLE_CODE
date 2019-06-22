@@ -1,0 +1,54 @@
+#include <Arduino.h>
+#include <wire.h>
+#include <SSD1306.h>
+
+SSD1306 display(0x3C, 32, 22);
+D1 = 13;
+D2 = 12;
+D3 = 14;
+D4 = 27;
+
+void setup() {
+  display.init();
+  display.drawString(0, 0, "hello world");
+  display.display();
+  pinMode(0, INPUT);
+  pinMode(4, INPUT);
+  pinMode(16, INPUT);
+  pinMode(17, INPUT);
+  pinMode(D1, OUTPUT);
+  pinMode(D2, OUTPUT);
+  pinMode(D3, OUTPUT);
+  pinMode(D4, OUTPUT);
+}
+
+void loop() {
+  S1 = digitalRead(0);
+  S2 = digitalRead(4);
+  S3 = digitalRead(16);
+  S4 = digitalRead(17);
+
+  if S1 == HIGH {
+    digitalWrite(D1, HIGH);
+  } else {
+    digitalWrite(D1, LOW);
+  }
+
+  if S2 == HIGH {
+    digitalWrite(D2, HIGH);
+  } else {
+    digitalWrite(D2, LOW);
+  }
+
+  if S3 == HIGH {
+    digitalWrite(D3, HIGH);
+  } else {
+    digitalWrite(D3, LOW);
+  }
+
+  if S4 == HIGH {
+    digitalWrite(D4, HIGH);
+  } else {
+    digitalWrite(D4, LOW);
+  }
+}
