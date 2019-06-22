@@ -3,10 +3,10 @@
 #include <SSD1306.h>
 
 SSD1306 display(0x3C, 32, 22);
-D1 = 13;
-D2 = 12;
-D3 = 14;
-D4 = 27;
+int D1 = 13;
+int D2 = 12;
+int D3 = 14;
+int D4 = 27;
 
 void setup() {
   display.init();
@@ -23,10 +23,10 @@ void setup() {
 }
 
 void loop() {
-  S1 = digitalRead(0);
-  S2 = digitalRead(4);
-  S3 = digitalRead(16);
-  S4 = digitalRead(17);
+  int S1 = digitalRead(0);
+  int S2 = digitalRead(4);
+  int S3 = digitalRead(16);
+  int S4 = digitalRead(17);
 
   if S1 == HIGH {
     digitalWrite(D1, HIGH);
