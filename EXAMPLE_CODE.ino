@@ -10,10 +10,10 @@ int D3 = 14;
 int D4 = 27;
 
 void setup() {
-  display.init();
+  display.init();                             // Maybe it needs to be rotated 180°
   display.drawString(0, 0, "hello world");    // Print "hello world" on display at 0, 0
   display.display();
-  pinMode(0, INPUT);
+  pinMode(2, INPUT);
   pinMode(4, INPUT);
   pinMode(16, INPUT);
   pinMode(17, INPUT);
@@ -24,30 +24,30 @@ void setup() {
 }
 
 void loop() {
-  int S1 = digitalRead(0);    // Variable declaration and reading input of buttons
+  int S1 = digitalRead(2);    // Variable declaration and reading input of buttons
   int S2 = digitalRead(4);
   int S3 = digitalRead(16);
   int S4 = digitalRead(17);
 
-  if S1 == HIGH {
+  if (S1 == HIGH) {
     digitalWrite(D1, HIGH);
   } else {
     digitalWrite(D1, LOW);
   }
 
-  if S2 == HIGH {
+  if (S2 == HIGH) {
     digitalWrite(D2, HIGH);
   } else {
     digitalWrite(D2, LOW);
   }
 
-  if S3 == HIGH {
+  if (S3 == HIGH) {
     digitalWrite(D3, HIGH);
   } else {
     digitalWrite(D3, LOW);
   }
 
-  if S4 == HIGH {
+  if (S4 == HIGH) {
     digitalWrite(D4, HIGH);
   } else {
     digitalWrite(D4, LOW);
