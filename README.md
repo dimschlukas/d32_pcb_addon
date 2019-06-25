@@ -14,16 +14,16 @@ This is a simple PCB for the Lolin D32, to learn and prototype your projects.
 
 ## Assigned pins
 #### Digital in and outputs
-| description | Pin No. |
-|-------------|---------|
-| Button 1    | 0       |
-| Button 2    | 4       |
-| Button 3    | 16      |
-| Button 4    | 17      |
-| LED 1       | 13      |
-| LED 2       | 45      |
-| LED 3       | 14      |
-| LED 4       | 27      |
+| description | Pin No. | IO      |
+|-------------|---------|---------|
+| Button 1    | 2       | `INPUT` |
+| Button 2    | 4       | `INPUT` |
+| Button 3    | 16      | `INPUT` |
+| Button 4    | 17      | `INPUT` |
+| LED 1       | 13      | `Output`|
+| LED 2       | 45      | `Output`|
+| LED 3       | 14      | `Output`|
+| LED 4       | 27      | `Output`|
 
 #### SPI / I2C / Serial
 | description | Pin No. |
