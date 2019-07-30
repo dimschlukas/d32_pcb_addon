@@ -21,7 +21,7 @@ This is a simple PCB for the Lolin D32, to learn and prototype your projects.
 | Button 3    | 16      | `INPUT` |
 | Button 4    | 17      | `INPUT` |
 | LED 1       | 13      | `Output`|
-| LED 2       | 45      | `Output`|
+| LED 2       | 12      | `Output`|
 | LED 3       | 14      | `Output`|
 | LED 4       | 27      | `Output`|
 
